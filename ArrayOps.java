@@ -9,11 +9,22 @@ public class ArrayOps {
     }
     return sum;
   }
+
   public static int largest(int[] arr) {
     int max = arr[0];
     for (int i = 1; i < arr.length; i++) {
       if (arr[i] > max) max = arr[i];
     }
     return max;
+  }
+
+  public static int[] sumRows(int[][] matrix) {
+    int a[] = new int [matrix.length];
+    for (int i = 0; i < matrix.length; i++) {
+      for (int j = 0; j < matrix[i].length; j++) {
+        a[i] = a[i] + matrix[i][j];
+      }
+    }
+    return a;
   }
 }
