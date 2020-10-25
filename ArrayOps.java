@@ -21,21 +21,15 @@ public class ArrayOps {
   public static int[] sumRows(int[][] matrix) {
     int a[] = new int [matrix.length];
     for (int i = 0; i < matrix.length; i++) {
-      for (int j = 0; j < matrix[i].length; j++) {
-        a[i] = a[i] + matrix[i][j];
+      a[i] = sum(matrix[i]);
       }
-    }
     return a;
   }
 
   public static int[] largestInRows(int[][] matrix) {
     int[] a = new int[matrix.length];
     for (int i = 0; i < matrix.length; i++) {
-      for (int j = 0; j < matrix[i].length; j++) {
-        if (matrix[i][j] > a[i]) {
-          a[i] = matrix[i][j];
-        }
-      }
+      a[i] = largest(matrix[i]);
     }
     return a;
   }
@@ -49,4 +43,7 @@ public class ArrayOps {
     }
     return sum1;
   }
+
+  // note: for my previous commits, I didn't use 4a and 4b in 4c and 4d since I wasn't
+  //       sure how to use it at first.
 }
