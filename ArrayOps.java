@@ -46,4 +46,14 @@ public class ArrayOps {
 
   // note: for my previous commits, I didn't use 4a and 4b in 4c and 4d since I wasn't
   //       sure how to use it at first.
+
+  public static int[] sumCols(int[][] matrix) {
+    int a[] = new int [matrix[0].length];
+    for (int i = 0; i < matrix.length; i++) {
+      for (int j = 0; j < matrix[i].length; j++) {
+        a[j] += matrix[i][j];
+      }
+    }
+    return a;
+  }
 }
